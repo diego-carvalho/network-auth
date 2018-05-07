@@ -44,8 +44,8 @@ def connection():
 
 # Run program
 filein = open('network-config.txt', 'r')
-login = filein.readline()
-password = filein.readline()
+login = filein.readline().rstrip()
+password = filein.readline().rstrip()
 filein.close()
 
 serial_magic = connection()
